@@ -1,0 +1,63 @@
+:root{
+    --link-color: blue;
+    --border-color: black;
+    --element-bg-color: gray;
+}
+
+body {
+    overflow-x: clip;
+
+}
+
+.dir, .media {
+    border: 2px solid black;
+    border-radius: 3px;
+    margin: 1px;
+}
+
+.dir {
+    padding: 3px;
+    font-family: monospace;
+    font-size: large;
+}
+
+.media{
+    width: 26.6666vw;
+    height: 26.6666vw;
+
+    display: inline-block;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    
+    cursor:zoom-in;
+    transition: transform .2s;
+    z-index: 100;
+    position: relative;
+
+    background-color: var(--element-bg-color);
+    background: solid;
+}
+
+video {
+    width: 100%;
+    z-index: 0;
+    position: relative;
+}
+.media:hover {
+    transform: scale(1.2);
+    z-index: 1000;
+    position: relative;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: var(--link-color);
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+}
