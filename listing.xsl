@@ -13,7 +13,7 @@
                 </xsl:when>
                 <xsl:otherwise>
                 <a href="{@staticpath}">
-                    <div class="media" data-thumbnailpath="{@thumbnailpath}" data-staticpath="{@staticpath}">
+                    <div class="media" data-thumbnailpath="{@thumbnailpath}.jpg" data-staticpath="{@staticpath}">
                         <a href="{@staticpath}"/>
                         <script>mediaSetup()</script>
                     </div>
@@ -76,7 +76,7 @@
             }
 
             function setBackground(p){
-                p.style.background = 'url('+p.dataset.thumbnailpath+')'
+                p.style.background = 'url(&quot;'+p.dataset.thumbnailpath+'&quot;)'
                 p.style.backgroundSize = 'cover'
                 p.style.backgroundRepeat = 'no-repeat'
                 p.style.backgroundPosition = 'center'
